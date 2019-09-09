@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 5</title>
+</head>
+
+<body>
+  <form>
+    <label for="lastName">Nom : </label><input type="text" name="lastName" id="lastName" />
+    <label for="firstName">Prénom : </label><input type="text" name="firstName" id="firstName" />
+    <button type="button" name="button">Envoyer</button>
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('#lastName').focus(function() {
+      $('#lastName').css({
+        border: '1px solid green'
+      });
+    });
+    $('#firstName').focus(function() {
+      $('#firstName').css({
+        border: '1px solid green'
+      });
+
+    });
+    $('#lastName,#firstName').focusout(function() {
+      $('#lastName,#firstName').css({
+        border: '1px solid red'
+      });
+    });
+  </script>
+</body>
+
+</html>
